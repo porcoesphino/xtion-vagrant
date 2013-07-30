@@ -1,19 +1,32 @@
-Coursera Startup Engineering Course - Virtual Machine [![endorse](https://api.coderwall.com/danielcsgomes/endorsecount.png)](https://coderwall.com/danielcsgomes)
+Virtual Machine: OpenNi with Xtion PRO LIVE
 =================================================================================================================================================================
 
-Creates a VirtualBox Virtual Machine with Vagrant and Puppet for Coursera Startup Engineering Course.
+Creates a VirtualBox Virtual Machine with Vagrant for Xtion PRO LIVE development.
 
 #### What will be installed
 
 
-* Ubuntu 12.10 64-bit
+* Ubuntu 12.04 32-bit LTS
 * Python, g++, wget, curl, htop, vim
-* Heroku
-* NodeJS v0.8.9
+
+##### TODO
+* sudo apt-get install mono-complete
+* sudo apt-get install libusb-1.0-0-dev
+* sudo apt-get install freeglut3-dev
+* sudo apt-get install build-essential
+* (Why these four??) python  openjdk-7-jdk doxygen graphviz
+* X
+* emacs
+* OpenNI
+* Nite
+* Sense
+* OpenCV with OpenNI support
+* PCL?
+
 
 #### Usage
 
-
+* Download and install [git](http://downloads.vagrantup.com/tags/v1.2.2)
 * Download and install [Vagrant 1.2.2](http://downloads.vagrantup.com/tags/v1.2.2)
 * Download and install [VirtualBox](https://www.virtualbox.org/wiki/Downloads)
 * Install git submodules: `git submodule update --init`
