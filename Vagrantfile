@@ -14,6 +14,8 @@ Vagrant.configure("2") do |config|
 #  # Custom base boxes seem simple but if we want to run from a desktop image sometime:
 #  https://github.com/jedi4ever/veewee
 
+  config.vm.provision :shell, :path => "bootstrap.sh"
+
   config.vm.network :private_network, ip: "10.0.0.5"
 
   config.vm.provider :virtualbox do |vb|
@@ -21,7 +23,6 @@ Vagrant.configure("2") do |config|
       "modifyvm", :id,
       "--memory", "512"
     ]
-    config.vm.provision :shell, :path => "bootstrap.sh"
   end
 
 end
