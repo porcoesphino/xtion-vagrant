@@ -41,6 +41,31 @@ class othertools {
     ensure => present,
     require => Exec["aptGetUpdate"]
   }
+  
+  package { "xorg":
+    ensure => "installed",
+    require => Exec["aptGetUpdate"]
+  }
+  
+  package { "emacs":
+    ensure => "installed",
+    require => Exec["aptGetUpdate"]
+  }
+  
+  package { "meld":
+    ensure => "installed",
+    require => Exec["aptGetUpdate"]
+  }
+  
+  package { "colordiff":
+    ensure => "installed",
+    require => Exec["aptGetUpdate"]
+  }
+  
+  package { "bash-completion":
+    ensure => "installed",
+    require => Exec["aptGetUpdate"]
+  }
 }
 
 include apt_update
