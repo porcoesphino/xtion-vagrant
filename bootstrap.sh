@@ -29,4 +29,10 @@ sudo aptitude install -y bash-completion
 # The Xtion libraries
 
 # Configuration
-cd ~ && git clone https://github.com/porcoesphino/dotfiles && cd dotfiles && make install
+# A horrible hack, but we know the vagrant user
+export HOME=/home/vagrant
+cd $HOME
+if [ ! -d $HOME/dotfiles ]; then
+  sudo -u vagrant git clone https://github.com/porcoesphino/dotfiles
+fi
+cd $HOME/dotfiles && sudo -u vagrant git submodule update --init && sudo -u vagrant make install
