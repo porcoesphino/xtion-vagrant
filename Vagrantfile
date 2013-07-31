@@ -13,23 +13,15 @@ Vagrant.configure("2") do |config|
 
 #  # Custom base boxes seem simple but if we want to run from a desktop image sometime:
 #  https://github.com/jedi4ever/veewee
-  
+
   config.vm.network :private_network, ip: "10.0.0.5"
-  
+
   config.vm.provider :virtualbox do |vb|
     vb.customize [
       "modifyvm", :id,
       "--memory", "512"
     ]
+    config.vm.provision :shell, :path => "bootstrap.sh"
   end
 
-  config.vm.provision :puppet do |puppet|
-    puppet.manifests_path = "vagrant/puppet/manifests"
-    puppet.module_path    = "vagrant/puppet/modules"
-    puppet.manifest_file  = "main.pp"
-    puppet.options        = [
-                              '--verbose',
-                              #'--debug',
-                            ]
-  end
 end
