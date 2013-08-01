@@ -6,16 +6,14 @@ Creates a VirtualBox Virtual Machine with Vagrant for Xtion PRO LIVE development
 #### What will be installed
 
 * Ubuntu 12.04 32-bit LTS
-* Python, g++, wget, curl, htop, vim
+* wget, curl, htop, vim, emacs, X
+* libusb-1.0-0-dev, freeglut3-dev, unzip
 
 ##### TODO
 * `sudo apt-get install mono-complete`
-* `sudo apt-get install libusb-1.0-0-dev`
-* `sudo apt-get install freeglut3-dev`
-* `sudo apt-get install build-essential`
+* 
 * (Why these four??) python  openjdk-7-jdk doxygen graphviz
-* X
-* emacs
+* 
 * OpenNI
 * Nite
 * Sense
