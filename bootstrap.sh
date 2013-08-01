@@ -27,7 +27,11 @@ meld
 colordiff
 bash-completion
 
-# The Xtion libraries
+# The Xtion libraries dependencies
+libusb-1.0-0-dev
+freeglut3-dev
+unzip
+zip
 
 )
 
