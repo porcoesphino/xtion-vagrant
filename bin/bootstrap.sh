@@ -5,6 +5,7 @@
 UPDATE_COMMAND="sudo apt-get"
 
 # Ensure catalogue is up to date
+sudo add-apt-repository "deb http://archive.canonical.com/ lucid partner"
 ${UPDATE_COMMAND} update
 
 packagelist=(
@@ -30,13 +31,24 @@ emacs
 meld
 colordiff
 bash-completion
-
-# The Xtion libraries dependencies
-libusb-1.0-0-dev
-freeglut3-dev
 unzip
 zip
+tar
+bzip
+gzip
 
+# The OpenNI dependencies as listed here:
+# https://github.com/OpenNI/OpenNI/README
+g++
+python
+libusb-1.0-0-dev
+freeglut3-dev
+sun-java6-jdk
+doxygen
+graphviz
+
+# Optional for Mono wrapper of OpenNI
+# mono-complete
 )
 
 ${UPDATE_COMMAND} install -y ${packagelist[@]}
