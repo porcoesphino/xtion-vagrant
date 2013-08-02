@@ -38,3 +38,28 @@ Creates a VirtualBox Virtual Machine with Vagrant for Xtion PRO LIVE development
 * On \*unix to enter in the machine run the command `vagrant ssh`
    * On Windows it will output the configuration for using `puTTy`
    * Use `vagrant ssh -- -Yt` to use X
+
+#### Overview
+
+***Note:*** Most of this is probably wrong
+
+- **NITE:** Closed source middleware sitting on top of OpenNI that contains a lot of the algorithms to do the fun stuff. What? I haven't researched. Forums are a mess. It seems like it's more for skeletons and user actions then point clouds
+- **The [simple-openni](https://code.google.com/p/simple-openni/) library:** wraps OpenNI for it's use with the Processing programming language. (Notable for how often it comes up in web searches).
+- **OpenCV:** is a decent computer vision library. Here are the [installation instructions](http://docs.opencv.org/doc/user_guide/ug_highgui.html) for use with OpenNI.
+- **PCL:** Is a decent point cloud library. [Here are instructions for using it with an Xtion](http://pointclouds.org/documentation/tutorials/openni_grabber.php)
+
+- [This blog](http://computervisionblog.wordpress.com/2012/09/03/xtion-kinect-on-ubuntu-12-04/) lists these versions for an Xtion Pro with ubuntu 12.04:
+   - [OpenNI unstable 1.5.4.0](http://openni.org/Downloads/OpenNIModules.aspx)
+   - [Harware binaries stable version 5.1.041](http://openni.org/Downloads/OpenNIModules.aspx)
+
+- [This blog](http://uzafar.wordpress.com/2013/02/05/running-xtion-using-openni-in-ubuntu-11-10/) breaks down the steps.
+- [This blog is best](http://igorbarbosa.com/articles/how-to-install-kin-in-linux-mint-12-ubuntu/) it breaks down steps and versions.
+
+#### Tools to help debug
+
+There is [a nice post in Spanish](http://blog.jorgeivanmeza.com/2011/12/instalacion-openni-sensor-kinect-y-nite-en-gnulinux-ubuntu-11-10-desde-fuentes/) that shows expected output for a Kinect. Just what we need!!
+
+- dmesg
+- lsusb
+- lsmod
+- rmmod
