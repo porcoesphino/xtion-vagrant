@@ -32,7 +32,7 @@ Creates a VirtualBox Virtual Machine with Vagrant for Xtion PRO LIVE development
 * Download and install [Vagrant 1.2.2](http://downloads.vagrantup.com/tags/v1.2.2)
 * Download and install [VirtualBox](https://www.virtualbox.org/wiki/Downloads)
 * Install the [vagrant-vbguest plugin](https://github.com/dotless-de/vagrant-vbguest) using `vagrant plugin install vagrant-vbguest`
-* * This ensures the machines guest additions match
+   * This ensures the machines guest additions match
 * Install git submodules: `git submodule update --init`
 * Run the command `vagrant up`
 * On \*unix to enter in the machine run the command `vagrant ssh` on Windows it will output the configuration to access via `puTTy`
