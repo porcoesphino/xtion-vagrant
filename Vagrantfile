@@ -40,7 +40,8 @@ Vagrant.configure("2") do |config|
 # the path on the host to the actual folder. The second argument is
 # the path on the guest to mount the folder. And the optional third
 # argument is a set of non-required options.
-# config.vm.synced_folder "../data", "/vagrant_data"
+ config.vm.synced_folder "src", "/home/vagrant/src"
+ config.vm.synced_folder "bin", "/home/vagrant/bin-vagrant"
 
 # Provider-specific configuration so you can fine-tune various
 # backing providers for Vagrant. These expose provider-specific options.
@@ -62,7 +63,7 @@ Vagrant.configure("2") do |config|
     # Allow hardware 3D acceleration
     vb.customize ["modifyvm", :id, "--accelerate3d", "on"]
     # New splash page must be an uncompressed 256 color BMP file
-#    vb.customize ["modifyvm", :id, "--bioslogoimagepath", "splash.bmp"]
+    vb.customize ["modifyvm", :id, "--bioslogoimagepath", "splash.bmp"]
     # Allow audio
     vb.customize ["modifyvm", :id, "--audio", "coreaudio"]
     # Allow bidirectional clipboard

@@ -5,6 +5,9 @@
 UPDATE_COMMAND="sudo apt-get"
 
 # Ensure catalogue is up to date
+if ! [ command -v add-apt-repository >/dev/null 2>&1 ]; then
+	${UPDATE_COMMAND} install -y python-software-properties
+fi
 sudo add-apt-repository "deb http://archive.canonical.com/ lucid partner"
 ${UPDATE_COMMAND} update
 
@@ -34,7 +37,7 @@ bash-completion
 unzip
 zip
 tar
-bzip
+bzip2
 gzip
 
 # The OpenNI dependencies as listed here:
