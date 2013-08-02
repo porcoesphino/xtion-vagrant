@@ -35,5 +35,6 @@ Creates a VirtualBox Virtual Machine with Vagrant for Xtion PRO LIVE development
    * This ensures the machines guest additions match
 * Install git submodules: `git submodule update --init`
 * Run the command `vagrant up`
-* On \*unix to enter in the machine run the command `vagrant ssh` on Windows it will output the configuration to access via `puTTy`
-* If using X then `vagrant ssh -- -Yt`
+* On \*unix to enter in the machine run the command `vagrant ssh`
+   * On Windows it will output the configuration for using `puTTy`
+   * Use `vagrant ssh -- -Yt` to use X
