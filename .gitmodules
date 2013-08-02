@@ -1,3 +1,12 @@
 [submodule "vagrant/puppet/modules/nodejs"]
 	path = vagrant/puppet/modules/nodejs
 	url = https://github.com/willdurand/puppet-nodejs.git
+[submodule "src/OpenNI2"]
+	path = src/OpenNI2
+	url = https://github.com/OpenNI/OpenNI2
+[submodule "src/OpenNI"]
+	path = src/OpenNI
+	url = https://github.com/OpenNI/OpenNI
+[submodule "src/Sensor"]
+	path = src/Sensor
+	url = https://github.com/PrimeSense/Sensor
