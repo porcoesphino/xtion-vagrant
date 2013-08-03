@@ -8,12 +8,10 @@ Creates a VirtualBox Virtual Machine with Vagrant for Xtion PRO LIVE development
 * Ubuntu 12.04 32-bit LTS
 * wget, curl, htop, vim, emacs, X
 * libusb-1.0-0-dev, freeglut3-dev, unzip
+* mono-complete, python, doxygen, graphviz
 
-##### TODO
-* `sudo apt-get install mono-complete`
-* 
-* (Why these four??) python  openjdk-7-jdk doxygen graphviz
-* 
+#### TODO
+
 * OpenNI
 * Nite
 * Sense
