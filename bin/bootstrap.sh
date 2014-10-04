@@ -8,7 +8,7 @@ UPDATE_COMMAND="sudo apt-get"
 if ! [ command -v add-apt-repository >/dev/null 2>&1 ]; then
 	${UPDATE_COMMAND} install -y python-software-properties
 fi
-sudo add-apt-repository "deb http://archive.canonical.com/ lucid partner"
+sudo add-apt-repository ppa:v-launchpad-jochen-sprickerhof-de/pcl
 ${UPDATE_COMMAND} update
 
 packagelist=(
@@ -40,18 +40,8 @@ tar
 bzip2
 gzip
 
-# The OpenNI dependencies as listed here:
-# https://github.com/OpenNI/OpenNI/README
-g++
-python
-libusb-1.0-0-dev
-freeglut3-dev
-sun-java6-jdk
-doxygen
-graphviz
-
-# Optional for Mono wrapper of OpenNI
-# mono-complete
+# Let's just trust PCL
+libpcl-all
 )
 
 ${UPDATE_COMMAND} install -y ${packagelist[@]}
